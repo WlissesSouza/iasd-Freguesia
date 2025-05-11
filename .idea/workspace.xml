@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a30865eb-328e-4dfe-8ecf-32ad3771d237" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Home/static/Home/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Home/static/Home/images/banner.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Home/static/Home/images/logo_iasd_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Home/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Home/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Home/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Home/static/Home/images/logo_branca.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/iasdFreguesia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iasdFreguesia.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/template/bases/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iasdFreguesia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/iasdFreguesia/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iasdFreguesia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/iasdFreguesia/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +68,11 @@
       <recent name="C:\Users\wliss\PycharmProjects\iasdFreguesia\Home\static\Home\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wliss\PycharmProjects\iasdFreguesia\Home\static\Home\images" />
+      <recent name="C:\Users\wliss\PycharmProjects\iasdFreguesia\Home\static\Home\logo_svg" />
       <recent name="C:\Users\wliss\PycharmProjects\iasdFreguesia\Home\static\Home\css" />
       <recent name="C:\Users\wliss\PycharmProjects\iasdFreguesia\Home\static\Home" />
       <recent name="C:\Users\wliss\PycharmProjects\iasdFreguesia\Home\templates" />
-      <recent name="C:\Users\wliss\PycharmProjects\iasdFreguesia\Home\templates\Home" />
-      <recent name="C:\Users\wliss\PycharmProjects\iasdFreguesia\Home\template" />
     </key>
   </component>
   <component name="RunManager">
@@ -122,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746905076220</updated>
       <workItem from="1746905077264" duration="810000" />
-      <workItem from="1746926892163" duration="11312000" />
+      <workItem from="1746926892163" duration="18047000" />
     </task>
     <servers />
   </component>

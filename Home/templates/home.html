@@ -1,8 +1,90 @@
-{% extends "base.html" %}  <!-- Usa o base.html como layout -->
+{% extends "base.html" %}
 
-{% block content %}  <!-- Insere conteúdo no bloco content -->
-<div class="text-center">
-    <h1>Bem-vindo ao Meu Projeto</h1>
-    <p>Este é o conteúdo da página inicial.</p>
-</div>
+{% block content %}
+    <!-- Div para o vídeo ao vivo, se existir -->
+    <div id="live-video-container" class="container text-center my-2 card" style="display: none;">
+        <h2 class="mb-4" style="color: #FF0000">Estamos Ao Vivo!</h2>
+        <div id="live-video"></div> <!-- Aqui ficará o vídeo ao vivo -->
+    </div>
+
+    <div class="container text-center my-2 card">
+        <h2>Sobre a IASD Freguesia</h2>
+        <p>A Igreja Adventista do Sétimo Dia Freguesia, localizada na Freguesia - Jacarepaguá, Rio de Janeiro, é uma
+            comunidade cristã dedicada a vivenciar os ensinamentos de Jesus Cristo e levar esperança, amor e apoio
+            espiritual a todos. Reunimo-nos aos sábados para cultos, Escola Sabatina e estudos bíblicos, além de
+            promover ações sociais e projetos que contribuem para o bem-estar da nossa comunidade.
+            <br><br>
+            Nosso objetivo é não apenas pregar o evangelho, mas também viver os valores de integridade, solidariedade e
+            paz. Oferecemos apoio a famílias carentes, programas de saúde e projetos educacionais, buscando transformar
+            vidas de maneira prática e significativa. Todos são bem-vindos a conhecer nossa igreja e participar das
+            nossas atividades, fazendo parte de uma família que cresce em fé e compromisso com Cristo.</p>
+    </div>
+
+    <div class="container text-center my-2 card">
+        <h2 class="mb-4">Últimos vídeos do nosso canal no YouTube</h2>
+        <div class="video-container d-flex flex-wrap justify-content-center gap-3 mb-5" id="video-container">
+            <p>Carregando vídeos...</p>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center my-2 card">
+        <h2 class="mb-4">Nosso Instagram</h2>
+        <!-- LightWidget WIDGET -->
+        <iframe src="//lightwidget.com/widgets/7e265a75ca9956d085ce2b00ba48a01b.html" scrolling="no"
+                allowtransparency="true" class="lightwidget-widget"
+                style="width:60%;border:0;overflow:hidden;"></iframe>
+    </div>
+
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+
+    <script>
+        fetch("/api/youtube/")
+            .then(response => response.json())
+            .then(data => {
+                const liveContainer = document.getElementById("live-video-container");
+                const liveVideoDiv = document.getElementById("live-video");
+                const videoContainer = document.getElementById("video-container");
+
+                videoContainer.innerHTML = ""; // Limpa o "Carregando..."
+
+                // Verifica se há vídeos
+                if (data.videos && data.videos.length > 0) {
+                    // Verifica se há um vídeo ao vivo
+                    const liveVideo = data.videos.find(video => video.live);
+
+                    if (liveVideo) {
+                        // Exibe o vídeo ao vivo
+                        const liveIframe = document.createElement("iframe");
+                        liveIframe.src = `https://www.youtube.com/embed/${liveVideo.video_id}`;
+                        liveIframe.width = "600";
+                        liveIframe.height = "400";
+                        liveIframe.allowFullscreen = true;
+                        liveIframe.style.borderRadius = "8px";
+                        liveIframe.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+                        liveVideoDiv.appendChild(liveIframe);
+
+                        // Exibe a div do vídeo ao vivo
+                        liveContainer.style.display = "block";
+                    }
+
+                    // Exibe os vídeos recentes
+                    data.videos.filter(video => !video.live).forEach(video => {
+                        const iframe = document.createElement("iframe");
+                        iframe.src = `https://www.youtube.com/embed/${video.video_id}`;
+                        iframe.width = "400";
+                        iframe.height = "270";
+                        iframe.allowFullscreen = true;
+                        iframe.style.borderRadius = "8px";
+                        iframe.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+                        videoContainer.appendChild(iframe);
+                    });
+                } else {
+                    videoContainer.innerHTML = "<p>Não há vídeos recentes disponíveis.</p>";
+                }
+            })
+            .catch(error => {
+                console.error("Erro ao carregar vídeos:", error);
+                document.getElementById("video-container").innerHTML = "<p>Erro ao carregar vídeos.</p>";
+            });
+    </script>
 {% endblock %}
