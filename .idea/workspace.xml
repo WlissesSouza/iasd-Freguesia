@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a30865eb-328e-4dfe-8ecf-32ad3771d237" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Home/static/Home/images/logo_branca.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/iasdFreguesia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iasdFreguesia.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boletim/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iasdFreguesia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/iasdFreguesia/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iasdFreguesia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/iasdFreguesia/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,14 +22,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "WlissesPSouza"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/WlissesSouza/iasd-Freguesia.git",
+    "accountId": "eb899a26-6e57-46d6-b85e-c4e3ffa21aa7"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -52,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/wliss/PycharmProjects/iasdFreguesia/Home/static/Home/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -120,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746905076220</updated>
       <workItem from="1746905077264" duration="810000" />
-      <workItem from="1746926892163" duration="18047000" />
+      <workItem from="1746926892163" duration="22003000" />
     </task>
     <servers />
   </component>

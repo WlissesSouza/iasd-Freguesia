@@ -2,6 +2,12 @@ from django.shortcuts import render
 import requests
 from django.conf import settings
 from django.http import JsonResponse
+from Boletim.models import Video
+
+
+def video_boletim(request):
+    video = Video.objects.first()  # Obtém o único vídeo (ou nenhum se não houver)
+    return render(request, 'video_boletim.html', {'video': video})
 
 
 def youtube_videos(request):
