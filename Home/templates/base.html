@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IASD Freguesia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Importa o arquivo style.css -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+</head>
+<body style="height: 100dvh; display: flex;
+        flex-direction: column;">
+<!-- Navbar -->
+<img src="{% static 'Home/images/banner.jpeg' %}" alt="Banner" height="250px">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Ícone de casa ao lado do nome do projeto -->
+        <img class="mx-4 pr-4" src="{% static 'Home/images/logo_iasd_png.png' %}" alt="logo_iasd_png" height="45px">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <!-- Ícone de "Home" -->
+                    <a class="nav-link active" aria-current="page" href="/">
+                        <i class="bi bi-house-fill"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <!-- Ícone de "Pessoa" -->
+                    <a class="nav-link" href="/about">
+                        <i class="bi bi-info-circle-fill"></i> Sobre
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <!-- Ícone de "Ferramentas" -->
+                    <a class="nav-link" href="/services">
+                        <i class="bi bi-gear-fill"></i> Serviços
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <!-- Ícone de "Envelope" -->
+                    <a class="nav-link" href="/contact">
+                        <i class="bi bi-envelope-fill"></i> Contato
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5  flex-grow-1">
+    <!-- Conteúdo dinâmico do Django será inserido aqui -->
+    {% block content %}
+
+    {% endblock %}
+    <div class="container mt-5 mb-3 d-flex flex-column align-items-center">
+        <h3 class="mb-3">Endereço</h3>
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58781.167694885924!2d-43.37002107116888!3d-22.956745547575164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd8303e98b863%3A0x999d2501f9b47871!2sIgreja%20Adventista%20do%20S%C3%A9timo%20Dia!5e0!3m2!1spt-BR!2sbr!4v1746931600269!5m2!1spt-BR!2sbr"
+                width="80%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="bg-dark text-white py-3 mt-auto px-5">
+    <div class=" d-flex justify-content-between">
+
+        <div class="text-center col-3">
+            <h5>HORÁRIOS DE CULTOS</h5>
+            <p>Sábados às 9h00 – Escola Sabatina</p>
+            <p>Sábado às 10h30 – Culto</p>
+            <p>Domingos às 19h30</p>
+            <p>Quartas às 20h</p>
+        </div>
+        <div class="text-center col-3">
+            <h5>Rede Social</h5>
+            <p><a class="btn text-branco text-hover-instagram d-inline-flex align-items-center gap-2"
+                  href="https://www.instagram.com/iasd.freguesia/"><span class="mx-2">Instagram</span><i
+                    class="bi bi-instagram"></i></a></p>
+            <p><a class="btn text-branco text-hover-youtube d-inline-flex align-items-center gap-2"
+                  href="https://www.youtube.com/@IASDFreguesiaRJ"><span class="mx-2">Youtube</span><i
+                    class="bi bi-youtube"></i></a></p>
+            <p><a class="btn text-branco text-hover-whatsapp d-inline-flex align-items-center gap-2" href="#"><span
+                    class="mx-2">Whatsapp</span><i class="bi bi-whatsapp"></i></a></p>
+        </div>
+        <div class="text-center col-3">
+            <h5>Links</h5>
+            <p><a class="btn text-branco text-hover-padrao d-inline-flex align-items-center gap-2"
+                  href="https://www.novotempo.com/">Novo Tempo</a></p>
+            <p><a class="btn text-branco text-hover-padrao d-inline-flex align-items-center gap-2"
+                  href="https://igrejas.adventistas.org/pt/Mapa">Encontre uma igreja</a></p>
+            <p><a class="btn text-branco text-hover-padrao d-inline-flex align-items-center gap-2"
+                  href="https://giving.7me.app/login">Dizimar/Ofertar</a></p>
+            <p><a class="btn text-branco text-hover-padrao d-inline-flex align-items-center gap-2"
+                  href="https://feliz7play.com/pt">Feliz 7 Play</a></p>
+            <p><a class="btn text-branco text-hover-padrao d-inline-flex align-items-center gap-2"
+                  href="https://cursos.novotempo.com/">Estudo Biblico</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (com dependências Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

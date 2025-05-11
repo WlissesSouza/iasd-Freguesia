@@ -1,0 +1,32 @@
+#footer p {
+    padding: 2px 0 2px 0;
+    margin: 0;
+    color: white;
+}
+#footer p a {
+    padding:  0;
+
+}
+.text-branco {
+    color: white;
+!important;
+}
+
+.text-hover-padrao:hover {
+    color: #1E3A8A;
+!important;
+}
+.text-hover-instagram:hover {
+    color: #C13584;
+!important;
+}
+
+.text-hover-youtube:hover {
+    color: #FF0000;
+!important;
+}
+
+.text-hover-whatsapp:hover {
+    color: #25D366;
+!important;
+}
