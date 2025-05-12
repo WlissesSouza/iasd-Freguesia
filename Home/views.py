@@ -59,6 +59,7 @@ def youtube_videos(request):
         return JsonResponse({"videos": videos})
 
     except requests.exceptions.RequestException as e:
+        print(e)
         return JsonResponse({"error": f"Erro ao se comunicar com a API do YouTube: {str(e)}"}, status=500)
 
 

@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tópico Jornalístico</title>
     <style>
+        @media (max-width: 480px) {
+            .news-details {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .news-title, .news-subtitle {
+                text-align: center;
+            }
+
+            .floating-button {
+                padding: 12px 16px;
+                font-size: 14px;
+                bottom: 30px;
+                right: 20px;
+            }
+        }
+
         /* Body principal */
         body {
             margin: 0;
@@ -19,8 +37,7 @@
 
         /* Container principal */
         .news-container {
-            width: 95vw; /* Tamanho responsivo */
-            height: 95vh;
+            width: 85vw; /* Tamanho responsivo */
             background: #000; /* Fundo do tópico */
             border-radius: 20px; /* Bordas arredondadas */
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8),
@@ -159,7 +176,7 @@
     </div>
     <a style="text-decoration: none;
 " class="floating-button" href="/"><i class="bi bi-house"></i>
- Retornar</a>
+        Retornar</a>
 
     <!-- Rodapé decorativo -->
     <div class="news-footer">

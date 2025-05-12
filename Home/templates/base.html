@@ -26,7 +26,8 @@
         </a>
 
         <!-- Botão responsivo "Hamburguer" -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -36,6 +37,11 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">
                         <i class="bi bi-house-fill"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#endereco">
+                        <i class="bi bi-geo-alt-fill"></i> Endereço
                     </a>
                 </li>
                 <li class="nav-item">
@@ -64,7 +70,7 @@
     {% block content %}
     {% endblock %}
 
-    <div class="container mt-2 pb-1 mb-3 d-flex flex-column align-items-center card">
+    <div id="endereco" class="container mt-2 pb-1 mb-3 d-flex flex-column align-items-center card">
         <h3 class="mb-3">Endereço</h3>
         <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58781.167694885924!2d-43.37002107116888!3d-22.956745547575164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd8303e98b863%3A0x999d2501f9b47871!2sIgreja%20Adventista%20do%20S%C3%A9timo%20Dia!5e0!3m2!1spt-BR!2sbr!4v1746931600269!5m2!1spt-BR!2sbr"
@@ -78,13 +84,7 @@
 <footer id="footer" class="bg-dark text-white py-3 mt-auto px-5">
     <div class=" d-flex justify-content-between">
 
-        <div id="horario-programacao" class="text-center col-3">
-            <h5>HORÁRIOS DE CULTOS</h5>
-            <p>Sábados às 9h00 – Escola Sabatina</p>
-            <p>Sábado às 10h30 – Culto</p>
-            <p>Domingos às 19h30</p>
-            <p>Quartas às 20h</p>
-        </div>
+
         <div id="rede-social" class="text-center col-3">
             <h5>Rede Social</h5>
             <p><a class="btn text-branco text-hover-instagram d-inline-flex align-items-center gap-2"
