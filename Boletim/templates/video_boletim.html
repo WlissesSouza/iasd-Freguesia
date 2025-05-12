@@ -164,7 +164,7 @@
     <!-- Área do vídeo -->
     <div class="news-video-container">
         <video controls>
-            <source src="{{ video.video_file.url }}" type="video/mp4">
+            <source src="{{ video.video_file.url }}?v={{ video.updated_at.timestamp }}" type="video/mp4">
             Seu navegador não suporta vídeos.
         </video>
     </div>
@@ -172,7 +172,7 @@
     <!-- Detalhes da notícia -->
     <div class="news-details">
         <h1 class="news-title">Titulo: {{ video.title }}</h1>
-        <h2 class="news-subtitle">Data da publicação: {{ video.publish_date }}</h2>
+        <h2 class="news-subtitle">Última atualização: {{ video.updated_at|date:"d/m/Y H:i" }}</h2>
     </div>
     <a style="text-decoration: none;
 " class="floating-button" href="/"><i class="bi bi-house"></i>

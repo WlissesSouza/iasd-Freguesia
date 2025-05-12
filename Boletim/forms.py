@@ -5,23 +5,25 @@ from .models import Video
 class VideoForm(forms.ModelForm):
     class Meta:
         model = Video
-        fields = ['title', 'description', 'video_file', 'publish_date']
+        fields = ['title', 'video_file']
         widgets = {
             'video_file': forms.ClearableFileInput(attrs={'accept': 'video/*'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Define um valor inicial para o campo no formulário renderizado
+        if self.fields['title'].initial is None:
+            self.fields['title'].initial = "Boletim"
+
 
     # Validando campos obrigatórios no formulário
     def clean(self):
         cleaned_data = super().clean()
         video_file = cleaned_data.get("video_file")
-        publish_date = cleaned_data.get("publish_date")
 
         # Valida o campo de anexo como obrigatório
         if not video_file:
             self.add_error('video_file', 'O campo de anexo é obrigatório.')
-
-        # Valida o campo de data como obrigatório
-        if not publish_date:
-            self.add_error('publish_date', 'O campo de data é obrigatório.')
 
         return cleaned_data
