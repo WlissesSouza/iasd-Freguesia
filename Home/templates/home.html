@@ -2,10 +2,10 @@
 
 {% block content %}
     <!--  se existi aqui que é a Div para o vídeo ao vivo -->
-    <div id="live-video-container" class="container text-center my-2 card" style="display: none;">
-        <h2 class="mb-4" style="color: #FF0000">Estamos Ao Vivo! <i class="bi bi-broadcast"></i></h2>
-        <div id="live-video"></div>
-    </div>
+{#    <div id="live-video-container" class="container text-center my-2 card" style="display: none;">#}
+{#        <h2 class="mb-4" style="color: #FF0000">Estamos Ao Vivo! <i class="bi bi-broadcast"></i></h2>#}
+{#        <div id="live-video"></div>#}
+{#    </div>#}
 
     <div class="container text-center my-2 card">
         <h2>Sobre a IASD Freguesia</h2>
@@ -27,12 +27,12 @@
         </div>
     </div>
 
-    <div class="container text-center my-2 card">
-        <h2 class="mb-4">Últimos vídeos do nosso canal no YouTube</h2>
-        <div class="video-container d-flex flex-wrap justify-content-center gap-3 mb-5" id="video-container">
-            <p>Carregando vídeos...</p>
-        </div>
-    </div>
+{#    <div class="container text-center my-2 card">#}
+{#        <h2 class="mb-4">Últimos vídeos do nosso canal no YouTube</h2>#}
+{#        <div class="video-container d-flex flex-wrap justify-content-center gap-3 mb-5" id="video-container">#}
+{#            <p>Carregando vídeos...</p>#}
+{#        </div>#}
+{#    </div>#}
 
     <div class="d-flex flex-column align-items-center my-2 card">
         <h2 class="mb-4">Nosso Instagram</h2>
@@ -44,54 +44,4 @@
 
     <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 
-    <script>
-        fetch("/api/youtube/")
-            .then(response => response.json())
-            .then(data => {
-                const liveContainer = document.getElementById("live-video-container");
-                const liveVideoDiv = document.getElementById("live-video");
-                const videoContainer = document.getElementById("video-container");
-
-                videoContainer.innerHTML = ""; // Limpa o "Carregando..."
-
-                // Verifica se há vídeos
-                if (data.videos && data.videos.length > 0) {
-                    // Verifica se há um vídeo ao vivo
-                    const liveVideo = data.videos.find(video => video.live);
-
-                    if (liveVideo) {
-                        // Exibe o vídeo ao vivo
-                        const liveIframe = document.createElement("iframe");
-                        liveIframe.src = `https://www.youtube.com/embed/${liveVideo.video_id}`;
-                        liveIframe.width = "600";
-                        liveIframe.height = "400";
-                        liveIframe.allowFullscreen = true;
-                        liveIframe.style.borderRadius = "8px";
-                        liveIframe.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
-                        liveVideoDiv.appendChild(liveIframe);
-
-                        // Exibe a div do vídeo ao vivo
-                        liveContainer.style.display = "block";
-                    }
-
-                    // Exibe os vídeos recentes
-                    data.videos.filter(video => !video.live).forEach(video => {
-                        const iframe = document.createElement("iframe");
-                        iframe.src = `https://www.youtube.com/embed/${video.video_id}`;
-                        iframe.width = "400";
-                        iframe.height = "270";
-                        iframe.allowFullscreen = true;
-                        iframe.style.borderRadius = "8px";
-                        iframe.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
-                        videoContainer.appendChild(iframe);
-                    });
-                } else {
-                    videoContainer.innerHTML = "<p>Não há vídeos recentes disponíveis.</p>";
-                }
-            })
-            .catch(error => {
-                console.error("Erro ao carregar vídeos:", error);
-                document.getElementById("video-container").innerHTML = "<p>Erro ao carregar vídeos.</p>";
-            });
-    </script>
 {% endblock %}
