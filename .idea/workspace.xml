@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a30865eb-328e-4dfe-8ecf-32ad3771d237" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ProgSabado/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProgSabado/templates/detalhes_programacao.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProgSabado/templates/listar_programacoes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProgSabado/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iasdFreguesia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/iasdFreguesia/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iasdFreguesia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/iasdFreguesia/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,22 +133,11 @@
       <workItem from="1746926892163" duration="22098000" />
       <workItem from="1747001928745" duration="9774000" />
       <workItem from="1747094105773" duration="207000" />
-      <workItem from="1747096337241" duration="2070000" />
+      <workItem from="1747096337241" duration="9416000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Home/models.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

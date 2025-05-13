@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Programação</title>
+</head>
+<body>
+    <h1>Detalhes da Programação ({{ programacao.data|date:"d/m/Y" }})</h1>
+    <ul>
+        {% for detalhe in detalhes %}
+            <li>
+                <strong>Ordem:</strong> {{ detalhe.ordem }}<br>
+                <strong>Momento:</strong> {{ detalhe.momento }}<br>
+                <strong>Detalhe:</strong> {{ detalhe.detalhe }}<br>
+                {% if detalhe.obs %}
+                    <strong>Observação:</strong> {{ detalhe.obs }}
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>Nenhum detalhe cadastrado para esta programação.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'listar_programacoes' %}">Voltar para lista de programações</a>
+</body>
+</html>
