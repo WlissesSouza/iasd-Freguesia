@@ -1,22 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Programações</title>
-</head>
-<body>
-    <h1>Programações (Mais Recentes)</h1>
-    <ul>
-        {% for programacao in programacoes %}
-            <li>
-                <a href="{% url 'detalhes_programacao' programacao.id %}">
-                    {{ programacao.data|date:"d/m/Y" }}
-                </a>
-            </li>
-        {% empty %}
-            <li>Nenhuma programação disponível.</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'base_prog.html' %}
+
+{% block title %}
+    Lista de Programações
+{% endblock title %}
+{% block style %}{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <h1 class="my-3">Programações (Mais Recentes)</h1>
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                <tr>
+                    <th>Dia</th>
+                    <th>Ancião do dia</th>
+                    <th>Opções</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for programacao in programacoes %}
+                    <tr>
+                        <td>
+                            <a href="{% url 'detalhes_programacao' programacao.id %}" class="text-decoration-none">
+                                Programação do dia: {{ programacao.data|date:"d/m/Y" }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'detalhes_programacao' programacao.id %}" class="text-decoration-none">
+                                {{ programacao.anciao_do_dia|default_if_none:"" }}
+                            </a>
+                        <td><a class="btn btn-dark" href="/admin/ProgSabado/programacao/{{ programacao.id }}" class="text-decoration-none">Editar</a>
+                        </td>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="2" class="text-danger">Nenhuma programação disponível.</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <a class="btn btn-dark col-1" href="/admin/ProgSabado/programacao">Criar</a>
+
+{% endblock content %}

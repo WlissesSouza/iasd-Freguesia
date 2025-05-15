@@ -1,26 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes da Programação</title>
-</head>
-<body>
-    <h1>Detalhes da Programação ({{ programacao.data|date:"d/m/Y" }})</h1>
-    <ul>
-        {% for detalhe in detalhes %}
-            <li>
-                <strong>Ordem:</strong> {{ detalhe.ordem }}<br>
-                <strong>Momento:</strong> {{ detalhe.momento }}<br>
-                <strong>Detalhe:</strong> {{ detalhe.detalhe }}<br>
-                {% if detalhe.obs %}
-                    <strong>Observação:</strong> {{ detalhe.obs }}
-                {% endif %}
-            </li>
-        {% empty %}
-            <li>Nenhum detalhe cadastrado para esta programação.</li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'listar_programacoes' %}">Voltar para lista de programações</a>
-</body>
-</html>
+{% extends 'base_prog.html' %}
+{% block title %}
+    Programação dia: {{ programacao.data }}
+{% endblock title %}
+
+{% block content %}
+    <div class="row">
+        <div class="col mb-4">
+
+            <h1 class="my-3">Detalhes da Programação ({{ programacao.data|date:"d/m/Y" }})</h1>
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                <tr>
+                    <td class="col-1">Ordem</td>
+                    <td class="col-5">Momento</td>
+                    <td class="col-5">Detalhe</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for detalhe in detalhes %}
+                    <tr>
+                        <td> {{ detalhe.ordem }}</td>
+                        <td> {{ detalhe.momento|default_if_none:"" }}</td>
+                        <td> {{ detalhe.detalhe|default_if_none:"" }}</td>
+                    </tr>
+                {% empty %}
+                    <li>Nenhum detalhe cadastrado para esta programação.</li>
+                {% endfor %}
+                </tbody>
+            </table>
+            <a class="btn btn-dark my-4" href="{% url 'listar_programacoes' %}">Voltar</a>
+<a class="btn btn-dark my-4" href="/admin/ProgSabado/programacao/{{ programacao.id }}/change">Editar</a>
+        </div>
+    </div>
+{% endblock content %}

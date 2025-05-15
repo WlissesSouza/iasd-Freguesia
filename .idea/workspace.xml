@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a30865eb-328e-4dfe-8ecf-32ad3771d237" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProgSabado/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProgSabado/templates/detalhes_programacao.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProgSabado/templates/listar_programacoes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProgSabado/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProgSabado/templates/base_prog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProgSabado/templates/detalhes_programacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProgSabado/templates/detalhes_programacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProgSabado/templates/listar_programacoes.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProgSabado/templates/listar_programacoes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProgSabado/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProgSabado/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iasdFreguesia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/iasdFreguesia/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iasdFreguesia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/iasdFreguesia/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -133,7 +131,9 @@
       <workItem from="1746926892163" duration="22098000" />
       <workItem from="1747001928745" duration="9774000" />
       <workItem from="1747094105773" duration="207000" />
-      <workItem from="1747096337241" duration="9416000" />
+      <workItem from="1747096337241" duration="9849000" />
+      <workItem from="1747180092686" duration="7099000" />
+      <workItem from="1747272428225" duration="112000" />
     </task>
     <servers />
   </component>
